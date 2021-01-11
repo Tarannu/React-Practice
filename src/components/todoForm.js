@@ -17,8 +17,7 @@ class todoForm extends React.Component{
         event.preventDefault();
         this.props.onSubmit({
             id:shortid.generate(),
-            text: this.state.text,
-            complete:false
+            text: this.state.text
         });
         this.setState({
             text:""

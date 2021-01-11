@@ -1,18 +1,28 @@
 import React,{Component} from 'react';
-import TodoList from './components/todoList'
-
+import TodoList from './components/todoList';
+import Wallet from './components/wallet'
+import './App.css';
 
 class App extends Component{
 
   state={
-      count:0,
+      
   };
   
   render(){
-    return( <div className="todoList">
+    return( 
+      <div >
+      <div className="todoList">
       
       <TodoList/>
       </div>
+
+      <div className='wallet'>
+      <Wallet/>
+      </div>
+      </div>
+      
+
 
     )
   }
