@@ -1,56 +1,33 @@
-import React from "react";
-import WalletForm from "./walletForm";
-import income from "./income";
+import React,{Component} from "react";
+import Header from './header';
+import Balance from "./Balance";
+import AddTransaction from "./AddTransaction";
+import IncomeList from './incomeList';
+import ExpenseList from './ExpenseList';
+import {GlobalContextProvider} from '../context/GlobalState';
 
 class Wallet extends React.Component {
   state = {
-    income: [],
-    incomeAmmount: [],
-    expense: [],
-    expenesAmmount: [],
-    netAmmount:0
+    
   };
-  addIncome = (inc, num, exp, expNum) => {
-    const newIncome = [inc, ...this.state.income];
-    const newIncomeAmmount = [num, ...this.state.incomeAmmount];
-    const newExpense = [exp, ...this.state.expense];
-    const newExpeseAmmount = [expNum, ...this.state.expenesAmmount];
-    const currentNet=this.state.netAmmount;
-    const currentIncome=this.state.incomeAmmount;
-    const currentExpense=this.state.expenesAmmount
-
-    this.setState({
-      income: newIncome,
-      incomeAmmount: newIncomeAmmount,
-      expense: newExpense,
-      expenesAmmount: newExpeseAmmount,
-      netAmmount:currentNet+currentIncome-currentExpense
-    });
-  };
-  addNetChange=(net)=>{
-      
-      this.setState({
-          
-      })
-  }
-
+  
+  
+  
   render() {
     return (
-      <div class="walletApp">
-        <h1>Wallet App </h1>
-        <WalletForm onSubmit={this.addIncome} />
-        {this.state.income.map((inc) => (
-          <div>
-            <div key={inc.id}>
-              <span> {inc.note}</span>
-              <span style={{ margin: 30 }}>{inc.ammount}</span>
-            </div>
-            <div>
-            <span>Net Income: {this.state.netAmmount}</span>
-            </div>
-          </div>
-        ))}
+      <GlobalContextProvider>
+      <div className="container">
+        <div className="app-wrapper">
+          <Header />
+          <AddTransaction />
+          <IncomeList />
+          <ExpenseList />
+          <Balance />
+          
+          
+        </div>
       </div>
+    </GlobalContextProvider>
     );
   }
 }

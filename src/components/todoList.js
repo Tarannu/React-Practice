@@ -11,7 +11,6 @@ class todoList extends React.Component{
     addTodo=(todo)=>{
         const newTodos=[todo,...this.state.todos];
         this.setState({
-           
             todos:newTodos
         });
     
@@ -32,7 +31,6 @@ class todoList extends React.Component{
             {this.state.todos.map(todo=>(
                 <Todo
                  key={todo.id} 
-                 
                  onDelete={()=>this.handleDeleteTodo(todo.id)}
                  todo={todo}/>
                 ))}

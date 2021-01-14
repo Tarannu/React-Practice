@@ -6,9 +6,7 @@ class walletForm extends React.Component {
     state = {
         incomeText:"",
         incomeInput: 0,
-        expenseText:"",
-        expenseInput: 0,
-        
+        //expenseInput: 0
     };
     handleIncomeSubmit = (event) => {
         event.preventDefault();
@@ -21,20 +19,6 @@ class walletForm extends React.Component {
             incomeText:'',
             incomeInput: '',
             
-        });
-
-    };
-    handleExpenseSubmit = (event) => {
-        event.preventDefault();
-        this.props.onSubmit({
-            id:shortid.generate(),
-            note:this.state.expenseText,
-            ammount:this.state.expenseInput
-           });
-        this.setState({
-            expenseText:'',
-            expenseInput: '',
-        
         });
 
     };
@@ -69,8 +53,7 @@ class walletForm extends React.Component {
             <div style={{}}>
 
             <form onSubmit={this.handleIncomeSubmit} >
-                
-                <label> Input  
+                <label> Income 
                 <input
                     type="text"
                     value={this.state.incomeText}
@@ -87,7 +70,7 @@ class walletForm extends React.Component {
 
                 
             </form>
-            <form onSubmit={this.handleExpenseSubmit}>
+            <form onSubmit={this.handleSubmit}>
             <label> Expense 
                 <input
                     type="text"

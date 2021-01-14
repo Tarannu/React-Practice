@@ -1,9 +1,10 @@
 import React,{Component} from 'react';
 import TodoList from './components/todoList';
-import Wallet from './components/wallet'
+import Wallet from './components/wallet';
 import './App.css';
 
-class App extends Component{
+
+class App extends React.Component{
 
   state={
       
@@ -11,6 +12,7 @@ class App extends Component{
   
   render(){
     return( 
+      
       <div >
       <div className="todoList">
       
@@ -19,8 +21,11 @@ class App extends Component{
 
       <div className='wallet'>
       <Wallet/>
+      
       </div>
+      
       </div>
+      
       
 
 
