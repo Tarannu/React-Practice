@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import TodoList from './components/todoList';
 import Wallet from './components/wallet';
+import SignUp from './components/SignUpForm'
+
 import './App.css';
 
 
@@ -12,10 +14,15 @@ class App extends React.Component{
   
   render(){
     return( 
-      
+     
       <div >
-      <div className="todoList">
+      <div className='signup-form'>
+      <h1 style={{textAlign:'center'}}> Sign Up form</h1>
+      <SignUp/>
+      </div>
       
+      <div className="todoList">
+      <h1 style={{textAlign:'center'}}>To do List</h1>
       <TodoList/>
       </div>
 
@@ -23,6 +30,7 @@ class App extends React.Component{
       <Wallet/>
       
       </div>
+      
       
       </div>
       

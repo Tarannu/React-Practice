@@ -17,7 +17,7 @@ class Wallet extends React.Component {
     return (
       <GlobalContextProvider>
       <div className="container">
-        <div className="app-wrapper">
+        <div >
           <Header />
           <AddTransaction />
           <IncomeList />
