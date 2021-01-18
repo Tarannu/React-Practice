@@ -6,3 +6,24 @@
 .walletApp{
   align-self: center;
 }
+/* signup form */
+
+.signup-form{
+  background-color: beige;
+}
+
+.component-signup-form{
+  align-items: center;
+  background-color:#fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px;
+  padding:2px;
+  margin: 0 auto;
+  max-width: 500px;
+  overflow: auto;
+
+}
+.signup-button{
+  box-sizing: border-box;
+  
+}

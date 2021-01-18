@@ -17,7 +17,7 @@ class App extends React.Component{
      
       <div >
       <div className='signup-form'>
-      <h1 style={{textAlign:'center'}}> Sign Up form</h1>
+      <h1 style={{textAlign:'center'}}> Create Account </h1>
       <SignUp/>
       </div>
       
