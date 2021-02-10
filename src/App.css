@@ -26,4 +26,8 @@
 .signup-button{
   box-sizing: border-box;
   
+  
+}
+.error-message{
+  color: red;
 }
